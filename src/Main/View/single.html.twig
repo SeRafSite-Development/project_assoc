@@ -1,0 +1,19 @@
+{% extends 'Main/View/Template/main.html.twig' %}
+
+{% block content %}
+	<div id='aktualnosci'>
+		<h3>{{ title }}</h3>
+		<p>{{ news.description }}</p>
+    	{% for row in images %}
+            <div class='aktualnosci image'><img src="{{ asset('img/'~news.image~'/'~row) }}"></div>	
+    	{% endfor %}
+    </div>
+    
+    <div id='tree'>
+		<ul>
+			{% for key,value in tree %}
+				<li><a href="/archiwum/{{ url[loop.index0] }}">{{ key }} ({{ value }})</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}

@@ -37,6 +37,24 @@ $routes->add('news',
 		))
 );
 
+$routes->add('newsShow', 
+	new Routing\Route('/aktualnosci/{slug}', array(
+		'_controller' => 'Main\\Controller\\NewsController::showNewsAction',
+		), array(
+        'slug' => '^([\w-])+'
+    	))
+);
+
+$routes->add('archive', 
+	new Routing\Route('/archiwum/{year}/{month}', array(
+		'month' => 0,
+		'_controller' => 'Main\\Controller\\NewsController::showArchiveAction',
+		), array(
+        'year' => '^\d{4}',
+        'month' => '^\d{1,2}'
+    	))
+);
+
 $routes->add('supportInfo', 
 	new Routing\Route('/mozesz-pomoc', array(
 		'_controller' => 'Main\\Controller\\SupportInfoController::indexAction',

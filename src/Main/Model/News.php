@@ -2,112 +2,60 @@
 
 namespace Main\Model;
 
+use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @Entity @Table(name="news")
- **/
+ * News
+ *
+ * @ORM\Table(name="news")
+ * @ORM\Entity
+ */
 class News
 {
-	/** @Id @Column(type="integer") @GeneratedValue **/
-	protected $id;
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_news", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idNews;
 
-	/** @Column(type="string") **/
-	protected $name;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Name", type="string", length=255, nullable=false)
+     */
+    private $name;
 
-	/** @Column(type="string") **/
-	protected $href;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Description", type="text", length=65535, nullable=false)
+     */
+    private $description;
 
-	/** @Column(type="string") **/
-	protected $image;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Slug", type="string", length=255, nullable=false)
+     */
+    private $slug;
 
-	/** @Column(type="string") **/
-	protected $description;
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Datetime", type="datetime", nullable=false)
+     */
+    private $datetime;
 
-	/** @Column(type="string") **/
-	protected $time;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Image", type="string", length=255, nullable=true)
+     */
+    private $image;
 
-	/** @Column(type="integer") **/
-	protected $year;
 
-	/** @Column(type="integer") **/
-	protected $month;
-
-	/** @Column(type="integer") **/
-	protected $day;
-
-	public function getId() {
-		return $this->id;
-	}
-
-	public function setId($id) {
-		$this->id = $id;
-	}
-
-	public function getName() {
-		return $this->name;
-	}
-
-	public function setName($name) {
-		$this->name = $name;
-	}
-
-	public function getHref() {
-		return $this->href;
-	}
-
-	public function setHref($href) {
-		$this->href = $href;
-	}
-
-	public function getImage() {
-		return $this->image;
-	}
-
-	public function setImage($image) {
-		$this->image = $image;
-	}
-
-	public function getDescription() {
-		return $this->description;
-	}
-
-	public function setDescription($description) {
-		$this->description = $description;
-	}
-
-	public function getTime() {
-		return $this->time;
-	}
-
-	public function setTime($time) {
-		$this->time = $time;
-	}
-
-	public function getYear() {
-		return $this->year;
-	}
-
-	public function setYear($year) {
-		$this->year = $year;
-	}
-
-	public function getMonth() {
-		return $this->month;
-	}
-
-	public function setMonth($month) {
-		$this->month = $month;
-	}
-
-	public function getDay() {
-		return $this->day;
-	}
-
-	public function setDay($day) {
-		$this->day = $day;
-	}
-
-	public function toArray() {
-		return get_object_vars($this);
-	}
 }
+

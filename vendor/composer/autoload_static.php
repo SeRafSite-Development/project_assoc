@@ -29,12 +29,17 @@ class ComposerStaticInit6974a08d6d6d667c96d4007af7b7e447
         array (
             'Psr\\Log\\' => 8,
         ),
+        'L' => 
+        array (
+            'Litton\\' => 7,
+        ),
         'D' => 
         array (
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
+            'DoctrineExtensions\\' => 19,
         ),
     );
 
@@ -75,6 +80,10 @@ class ComposerStaticInit6974a08d6d6d667c96d4007af7b7e447
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
         ),
+        'Litton\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Litton',
+        ),
         'Doctrine\\Instantiator\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
@@ -90,6 +99,10 @@ class ComposerStaticInit6974a08d6d6d667c96d4007af7b7e447
         'Doctrine\\Common\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
+        'DoctrineExtensions\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/beberlei/DoctrineExtensions/src',
         ),
     );
 
