@@ -2,6 +2,16 @@
 
 {% block content %}
 
-    
+    <div class='partners'>
+    	{% for row in partners %}
+    	    <p><a href="{{ row.slug }}"><b>{{ row.name }}</b></a>{{ row.description }}</p>
+    	{% endfor %}
+    </div>
+
+    <div id='list'>
+    	{% for row in rest %}
+    	    <li><a href="{{ row.slug }}">{{ row.name }}</a></li>
+    	{% endfor %}
+    </div>
 
 {% endblock %}

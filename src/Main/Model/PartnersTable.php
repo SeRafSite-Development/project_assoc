@@ -11,4 +11,20 @@ class PartnersTable extends BaseTable
 
 		return $q->getQuery()->getArrayResult();
 	}
+
+	public function getSitePartners(){
+		$q = $this->qb->select('part')
+			->from('Main\Model\Partners', 'part')
+			->where($this->qb->expr()->isNotNull('part.description'));
+
+		return $q->getQuery()->getArrayResult();
+	}
+
+	public function getRestPartners(){
+		$q = $this->qb->select('part')
+			->from('Main\Model\Partners', 'part')
+			->where($this->qb->expr()->isNull('part.description'));
+
+		return $q->getQuery()->getArrayResult();
+	}
 }
