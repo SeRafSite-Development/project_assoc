@@ -6,39 +6,118 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+p,a
+{
+    font-size: 18px;
+}
+
 #header
 {
-    height: 17vh;
+    min-height: 110px;
     width: 100%;
     box-sizing: border-box;
 }
 
 #top-nav
 {
-    width: 100%;
-    height: 7vh;
+    width: 100%; 
+    height: 45px;
     background-color: #2a2b2c;
     color: gray;
-    padding-top: 5px;
     border-bottom: 1px solid #EEC43D;
-    padding-left: 10%;
+    padding-left: 5%;
     box-sizing: border-box;
+    position: relative;
+}
+
+#logo
+{
+    position: absolute;
+    z-index: 1000;
+    width: 120px;
+    height: 120px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: #EEC43D;
+}
+
+#logo img
+{
+    height: 80%;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+#naglowek
+{
     padding-top: 18px;
+    float: left;
 }
 
 #top-nav h1
 {
-    font-size: 20px;
+    margin-top: 2px;
+    font-size: 21px;
     color: grey;
+    padding-left: 135px;
 }
 
+#krs
+{
+    margin-left: 75.5%;
+}
+
+.krs-resp
+{
+    text-align: center;
+    padding-top: 0px;
+    display:none;
+    height: 10px;
+}
+
+#krs h2
+{   
+    display: block;
+    text-align: right;
+    font-size: 20px;
+    color: orange; 
+    float: left;
+    margin-top: 22px;
+}
+
+#media 
+{
+    margin-top: 22px;
+    float: left;
+}
+
+#krs span
+{
+    color: orange;
+    font-size: 16px;
+    padding: 2px;
+    border: 1px solid orange;
+    border-radius: 100%;
+    margin-left: 8px;
+}
+
+#krs i
+{
+    padding: 2px;
+    font-size: 17px;
+    border-radius: 100%;
+    border: 1px solid #4d70ba;
+    margin-left: 5px;
+    color: #4d70ba;
+    padding-bottom: 1px;
+}
 
 #nav
 {
     background-color: #1e1e20;
     width: 100%;
-    height: 10vh;
-    box-sizing: border-box;
+    min-height: 65px;
     padding-top: 1%;
     font-size: 30px;
     box-sizing: border-box;
@@ -51,6 +130,7 @@
     padding-right: 5px;
     padding-left: 5px;
     padding-top: 10px;
+    position: relative;
 }
 
 #nav ul li
@@ -61,7 +141,6 @@
     border-right: 1px solid grey;
     padding-left: 15px;
     padding-right: 15px;
-    
 }
 
 #nav ul li:last-child
@@ -77,33 +156,175 @@
     font-family: 'Roboto', sans-serif;
 }
 
+#nav ul li a:hover
+{
+    color: #EEC43D;
+}
+
 #nav ul li ul
 {
     display: none;
 }
 
-#main-img
+#nav .toggle,[id="drop"]
 {
-    box-sizing: border-box;
-    background-image: url("../img/dzieci.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    height: 540px;
-    width: 100%;
+    display: none;
 }
 
-#aktualnosci
+
+
+.slider-caption
 {
-    background-color: #e6e6e6;
-    padding-top: 40px;
+    box-sizing: border-box;
+/*    background-color: #EEC43D;
+    opacity: 0.6;*/
+    
+    padding-top: 10%;
+    font-size: 100px;
+    color: black;
+    height: 600px;
+    
+}
+
+#napis
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+
+.slider-caption h2
+{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+
+.slider-caption strong
+{
+    color: white;
+    font-size: 15px;
+    margin-right: 5%;
+}
+
+#slider {
+    overflow: hidden;
+    height: 550px;
+    position: relative;
+}
+
+.slide-show {
+    
+    position: absolute;
+    height: 100%;   
+}
+
+.slide-show .single-slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    
+    
+}
+
+#slider .slide-show .single-slide img {
+    border: none;
     width: 100%;
-    height: 650px;
+    min-height: 100%;
+}
+
+#slider .slide-show .single-slide .slider-caption
+{
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+#slider .slider-arrows a{
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    color: #fff;
+}
+
+#slider .slider-arrows a:hover{
+    color: #333;
+}
+
+#slider .slider-arrows .prev-slide{
+    position: absolute;
+    left: 0;
+    z-index: 10;
+}
+
+#slider .slider-arrows .next-slide {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+}
+
+#photo1
+{
+    background-image: linear-gradient(to bottom,rgba(238, 196, 61, 0.6),rgba(238, 196, 61, 0.6)), url("../img/dzieci.jpg");
+    height: 100%; s
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+#photo2
+{
+    background-image: linear-gradient(to bottom,rgba(238, 196, 61, 0.6),rgba(238, 196, 61, 0.6)), url("../img/dzieci2.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#photo3
+{
+    background-image: linear-gradient(to bottom,rgba(238, 196, 61, 0.6),rgba(238, 196, 61, 0.6)), url("../img/dzieci3.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#photo4
+{
+    background-image: linear-gradient(to bottom,rgba(238, 196, 61, 0.6),rgba(238, 196, 61, 0.6)), url("../img/dzieci4.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#photo5
+{
+    background-image: linear-gradient(to bottom,rgba(238, 196, 61, 0.6),rgba(238, 196, 61, 0.6)), url("../img/dzieci5.jpg");
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h2
 {  
-    font-size: 30px;
+    font-size: 25px;
     color: #EEC43D;
     text-align: left;
 }
@@ -112,7 +333,7 @@ h3
 {
     font-size: 20px;
     text-align: center;
-    color: gray;  
+    color: #2a2b2c;  
 }
 
 .aktualnosci
@@ -122,7 +343,6 @@ h3
     float: left;
     height: 500px;
     width: 20%;
-    margin-left: 
     font-size: 20px;
     margin-left: 4%;
     padding: 5px;
@@ -147,6 +367,24 @@ h3
     font-size: 13px;
     color: black;  
     text-align: center;
+}
+
+#tekst
+{
+    float: left;
+    width:42.5%;
+    height: 400px;
+    text-align: center;
+    margin-top: 27px;
+    box-sizing: border-box;
+}
+
+#tekst p
+{
+    text-align: center;
+    font-size: 1.5vw;
+    color: black;
+    padding: 15px 30px;
 }
 
 .zdjecie
@@ -185,7 +423,7 @@ h3
 {
     background-color: #1e1e20 ;
     height: 300px;
-    font-size: 20px;
+    font-size: 2vw;
     display: block;
     float: left;
     padding-top:20px;
@@ -196,7 +434,7 @@ h3
 {
     text-align: center;
     height: 50px;
-    font-size: 20px;
+    font-size: 1.5vw;
     display: inline-block;
     padding-left: 50px;
     padding-right: 50px;
@@ -208,21 +446,74 @@ h3
     text-align: center;
 }
 
-#news, #goal
+#contact2
 {
-    width: 80vw;
-    height: 500px;
-    margin: 40px auto;
-    text-align: center;
+    display: none;
 }
 
-#figure, #event
+.top-contact2
 {
-    width:60%;
+    width: 100%;
+    text-align: center;
+    background-color: #2a2b2c;
+}
+
+.top-contact2 h4
+{
+    font-size:25px;
+    color: #EEC43D;
+    background-color: 
+}
+
+.info2
+{
+    background-color: #1e1e20;
+    color: gray;
+    padding: 30px;
+}
+
+#news
+{
+    width: 100%;
+    height: 480px;
+    margin-top: 60px;
+}
+
+#news figcaption
+{
+   display: none;
+}
+
+#goal
+{
+    width: 100%;
+    height: 550px;
+    margin: 20px auto;
+    text-align: center;    
+}
+
+#figure
+{
+    margin-left: 8%;
+    border-top: 2px solid #EEC43D;
+    width:48%;
     height: 400px;
     float: left;
     padding-top: 25px;
-    border-top: 2px solid #EEC43D;
+}
+
+#news h2
+{
+    padding-left: 8%;
+}
+
+#event
+{
+    width:48%;
+    height: 450px;
+    float: left; 
+    margin-left: 8%;
+  
 }
 
 #figure img
@@ -232,21 +523,12 @@ h3
 }
 
 
-#archiwum, #fb
+#fb
 {
     float: left;
-    width:30%;
-    margin-left: 10%;
-    height: 400px;
-    text-align: center;
-}
-
-#archiwum ul li a
-{
-    font-size:20px;
-    display: block;
-    margin: 5px 0px;
-    text-decoration: none;
+    width: 43%;
+    height: 492px;
+    text-align: center;  
 }
 
 h3
@@ -255,18 +537,21 @@ h3
     margin-top: 10px;
 }
 
-#event .figure
+.figure
 {
     float: left;
     width: 48%;
     height: 200px;
-    margin-bottom: 30px;
-    padding-bottom: 25px;
+    margin-bottom: 70px;
+    padding-top: 10px;
+    border-top: 2px solid #EEC43D;
 }
 
 #event .figure img
 {
     margin-bottom: 20px;
+    width: 100%;
+    height: 100%;
 }
 
 #event .figure:nth-of-type(2n)
@@ -279,10 +564,25 @@ figcaption
     font-size: 20px;
 }
 
-#partnerzy
+#help
 {
-    width: 100vw;
-    height: 500px;
+    margin-top: 80px;
+    width: 80vw;
+    height: 200px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+#partnerzy 
+{
+    margin-top: 80px;
+    width: 80vw;
+    height: 220px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #partnerzy h2
@@ -291,16 +591,16 @@ figcaption
     text-align: center;
 }
 
-#partnerzy i
+#partnerzy i, #help i
 {
     display: inline-block;
-    font-size: 40px;
+    font-size: 1em;
     text-align: center;
 }
 
 #border
 {
-    width: 80%;
+    width: 80vw;
     margin-left:auto;
     margin-right: auto;
 }
@@ -308,7 +608,7 @@ figcaption
 .border
 {
     border: 1px solid black;
-    width:37.5vw;
+    width:37vw;
 }
 
 .info h4
@@ -323,17 +623,272 @@ figcaption
     color: gray;
 }
 
+#help
+{
+    margin-top: 30px;
+}
+
+#help h2
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#help p
+{
+    padding: 10px;
+    font-size: 1.6vw;
+}
+
+#firm
+{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 200px;
+}
+
+.logo
+{
+    display: inline-block;
+    width: 15%;
+    height: 50px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.logo img
+{
+    width: 100%;
+    height: 100%;  
+}
+
+.w3-button
+{
+    color: #2a2b2c;
+    background-color:  #EEC43D;
+   
+    float: left;
+    font-size: 30px;
+    border: 0;
+}
+
+.w3-display-right
+{
+    margin-right: 1.6%;
+    float: right;
+}
+
+.mySlides:not(.not)
+{
+    display: none;
+}
+
+#kontakt
+{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    padding-top: 80px;
+    text-align: center;
+}
+
+#kontakt h2
+{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#map2
+{
+    height: 300px;
+    width: 50%;
+    float: left;
+}
+
+#address
+{
+    float:left;
+    width: 50%;
+    height: 400px;
+    text-align: left;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+#address strong
+{
+    text-align: left;
+    font-size: 15px;
+    color: black;
+    font-size: 20px;
+    margin-left: 120px;
+}
+
+#address p a
+{
+    text-decoration: none;
+    color: #EEC43D;
+}
+
+
+/*aktualnosci*/
+
+#nextnews
+{   
+    margin-left: 15%;
+    width: 40%;
+    box-sizing: border-box;
+    float: left;
+    margin-top: 40px;
+}
+
+#asidenews 
+{
+    margin-left: 5%;
+    float: left;
+    width: 30%;
+    min-height: 300px;
+    box-sizing: border-box;
+    padding-top: 26px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+#nextnews .nextnews
+{
+    width: 100%;
+    min-height: 400px;
+    margin-bottom: 35px;
+}
+
+#nextnews .nextnews .figurenews
+{
+    width: 100%;
+    min-height: 320px;
+    font-size: 20px;
+    box-sizing: border-box;
+    margin: 0px auto;
+    border-top: 1px solid #EEC43D;    
+    padding-top: 20px;    
+}
+
+#nextnews .figurenews img
+{
+    width: 100%;
+    height: 60%;
+}
+
+.nextnews .figurenews figcaption
+{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.nextnews p
+{
+    font-size: 17px;
+}
 
 
 
 /*
-#footer
+.nextnews .figurenews figcaption
 {
-    height: 20px;
-    width: 100%;
-    padding-left: 10%;
-    font-size: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.nextnews p
+{
+    font-size: 16px;
+}
+
+.nextnews strong
+{
+    display: block;
+    font-size: 14px;
+    text-align: left;
+    padding-top: 20px;
+    font-weight: 200;
 }
 */
 
+#asidenews h3
+{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
 
+#asidenews #ulnews li 
+{
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    display: block;
+    border-bottom: 0.1px dotted gray;
+    padding: 5px;
+}
+
+#asidenews #ulnews li a
+{
+    color: black;
+    text-decoration: none;
+}
+
+#asidenews #ulnews li a:hover
+{
+    color: #EEC43D;
+    text-decoration: none;
+}
+
+.nextnews a 
+{
+    margin-top: 20px;
+    display: block;
+    text-align: right;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    color: #EEC43D;
+}
+
+.subpage
+{
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.subpagetext
+{
+    padding: 20px 60px;
+    font-size: 2.5vw;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+#footer
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    height: 20px;
+    width: 100%;
+    background-color: #2a2b2c;
+}
+
+#footer p
+{
+    text-align: center;
+    font-size: 20px;
+    
+}

@@ -78,4 +78,17 @@ class NewsTable extends BaseTable
 
 		return $q->getQuery()->getArrayResult();
 	}
+
+	public function checkArchiveYear($year){
+		$emConfig = $this->em->getConfiguration();
+    	$emConfig->addCustomDatetimeFunction('YEAR', 'DoctrineExtensions\Query\Mysql\Year');
+
+		$q = $this->qb->select('news')
+			->from('Main\Model\News', 'news')
+			->where($this->qb->expr()->eq('YEAR(news.datetime)', ':year'))
+			->orderBy('news.datetime', 'DESC')
+			->setParameter('year', $year);
+
+		return $q->getQuery()->getArrayResult();
+	}
 }

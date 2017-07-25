@@ -45,7 +45,11 @@ class NewsController extends App
 	}
 
 	public function showArchiveAction($year, $month){
-		$res = (new NewsTable($this->getEntityManager()))->checkArchive($year, $month);
+		if($month == 0){
+			$res = (new NewsTable($this->getEntityManager()))->checkArchiveYear($year);
+		} else{
+			$res = (new NewsTable($this->getEntityManager()))->checkArchive($year, $month);
+		}
 
 		if(count($res) != 0){
 			$result = $this->makeImageUrl($res);

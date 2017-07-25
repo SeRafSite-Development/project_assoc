@@ -19,17 +19,17 @@ $routes->add('about',
 		))
 );
 
-$routes->add('actions', 
-	new Routing\Route('/o-nas/dzialania', array(
-		'_controller' => 'Main\\Controller\\ActionsController::indexAction',
-		))
-);
+// $routes->add('actions', 
+// 	new Routing\Route('/o-nas/dzialania', array(
+// 		'_controller' => 'Main\\Controller\\ActionsController::indexAction',
+// 		))
+// );
 
-$routes->add('statute', 
-	new Routing\Route('/o-nas/statut', array(
-		'_controller' => 'Main\\Controller\\StatuteController::indexAction',
-		))
-);
+// $routes->add('statute', 
+// 	new Routing\Route('/o-nas/statut', array(
+// 		'_controller' => 'Main\\Controller\\StatuteController::indexAction',
+// 		))
+// );
 
 $routes->add('news', 
 	new Routing\Route('/aktualnosci', array(
