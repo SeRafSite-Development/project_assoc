@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <div class='partners'>
+    <!--<div class='partners'>
     	{% for row in partners %}
     	    <p><a href="{{ row.slug }}"><b>{{ row.name }}</b></a>{{ row.description }}</p>
     	{% endfor %}
@@ -12,6 +12,63 @@
     	{% for row in rest %}
     	    <li><a href="{{ row.slug }}">{{ row.name }}</a></li>
     	{% endfor %}
-    </div>
+    </div>-->
+    
+    //Slider
+    
+    <h2 class="subpage">Partnerzy</h2>
+    
+    <p class="subpagetext">Stowarzyszenie Nasze Dzieci działając w tej formie dociera ze swymi imprezami do dzieci w Państwowych Domach Dziecka, Domach i Pogotowiach Opiekuńczych, Specjalistycznych Szpitalach Dziecięcych, Sanatoriach Rehabilitacyjnych, Szkołach Specjalnych, wszędzie tam, gdzie przebywają dzieci wymagające szczególnej opieki. Organizujemy również imprezy masowe i plenerowe, a także imprezy płatne , z których część wypływów również przeznaczamy na cele dobroczynne. W głównej mierze jednak staramy się docierać do dzieci, które z różnych przyczyn nie mogą obcować ze sztuką. Wszystkie te imprezy mogą odbyć się jedynie dzięki pomocy Przedsiębiorstw, Firm Prywatnych, a często też Pojedynczych Osób stąd też nasz apel i prośba do Państwa o pomoc finansową w realizacji tych przedsięwzięć. Każda nawet najmniejsza kwota jest bardzo cenna. W przypadku przekazania jakiejkolwiek kwoty na nasze konto, niezwłocznie po zrealizowaniu imprezy przesyłamy do Państwa dokumenty potwierdzające fakt wykorzystania powyższych środków na organizację imprezy tzn. rachunek oraz pismo z placówek uczestnicących w imprezie.</p>
+    
+    <section id="partnerzy">
+        <h2>Wspierają nas!</h2>
+        <div id="border">  
+            <i class="border"></i><i class="icon-group"></i><i class="border"></i>
+        </div>
+        
+        <div id="firm">
+         
+           <div class="mySlides not">
+
+                   <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                
+                    <div class="logo"><img src="public/img/partners/bahlsen_logo.jpg" alt="bahlsen"></div>
+                    <div class="logo"><img src="public/img/partners/duet.png" alt="duet"></div>
+                    <div class="logo"><img src="public/img/partners/elwolight-logo.png" alt="duet"></div>
+                <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+           </div>
+           
+            <div class="mySlides">
+               <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <div class="logo"><img src="public/img/partners/gryfix.png" alt="gryfix"></div>
+                    <div class="logo"><img src="public/img/partners/berner.png" alt="berner"></div>
+                    <div class="logo"><img src="public/img/partners/conus.jpg" alt="conus"></div>
+                <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+            </div>
+            
+            <div class="mySlides">
+                <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <div class="logo"><img src="public/img/partners/euro-trade.jpg" alt="euro-trade"></div>
+                    <div class="logo"><img src="public/img/partners/kmc-service.png" alt="kmc-service"></div>
+                    <div class="logo"><img src="public/img/partners/heban.png" alt="heban"></div>
+                <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+            </div>
+            
+            <div class="mySlides">
+               <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <div class="logo"><img src="public/img/partners/hurt-poz.png" alt="hurt-poz"></div>
+                    <div class="logo"><img src="public/img/partners/lajkonik.jpg" alt="kmc-service"></div>
+                    <div class="logo"><img src="public/img/partners/lartus.png" alt="lartus"></div>
+                <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+            </div>
+            
+        </div>
+    </section>  
+    
+    
 
 {% endblock %}
+
+
+
+
