@@ -1,19 +1,37 @@
 {% extends 'Main/View/Template/main.html.twig' %}
 
 {% block content %}
-	<div id='aktualnosci'>
+
+<div id="nextnews">
+	    <div class="nextnews">
+	    	<h2>{{ title }}</h2>
+	    	<figure class="figurenews">
+	    		<img src="{{ asset('img/'~news.image~'/'~row) }}" alt="">
+	            <figcaption>{{ news.datetime|date('Y-m-d') }}</figcaption>
+	            <p>{{ news.description }}</p>
+	        </figure> 
+		</div>
+
+</div>
+
+<div id="resp"></div>
+    
+<aside id="asidenews">
+   
+    <h3>Archiwum</h3>
+    <ul id="ulnews">
+       	{% for key,value in tree %}
+			<li><a href="/archiwum/{{ url[loop.index0] }}">{{ key }} ({{ value }})</a></li>
+		{% endfor %}   
+    </ul>
+    
+</aside>
+
+<!-- 	<div id='aktualnosci'>
 		<h3>{{ title }}</h3>
 		<p>{{ news.description }}</p>
     	{% for row in images %}
             <div class='aktualnosci image'><img src="{{ asset('img/'~news.image~'/'~row) }}"></div>	
     	{% endfor %}
     </div>
-    
-    <div id='tree'>
-		<ul>
-			{% for key,value in tree %}
-				<li><a href="/archiwum/{{ url[loop.index0] }}">{{ key }} ({{ value }})</a></li>
-			{% endfor %}
-		</ul>
-	</div>
-{% endblock %}
+ -->{% endblock %}

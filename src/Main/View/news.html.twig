@@ -10,7 +10,7 @@
 	            <figcaption>{{ row.datetime|date('Y-m-d') }}</figcaption>
 	            <p>{{ row.description }}</p>
 	        </figure> 
-			<a href="">więcej</a>
+			<a href="{{ '/aktualnosci/'~row.slug }}">więcej</a>
 		</div>
 	{% endfor %}
 
