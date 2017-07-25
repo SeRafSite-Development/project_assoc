@@ -2,6 +2,8 @@
 
 {% block content %}
 
+
+
 <div id="nextnews">
 	    <div class="nextnews">
 	    	<h2>{{ title }}</h2>
@@ -11,8 +13,36 @@
 	            <p>{{ news.description }}</p>
 	        </figure> 
 		</div>
+		
+		<div class="nextnews">
+	    	<h2>{{ title }}</h2>
+	    	<figure class="figurenews">
+	    		<img src="{{ asset('img/'~news.image~'/image0.jpg') }}" alt="">
+	            <figcaption>{{ news.datetime|date('Y-m-d') }}</figcaption>
+	            <p>{{ news.description }}</p>
+	        </figure> 
+		</div>
+		
+		<div class="nextnews">
+	    	<h2>{{ title }}</h2>
+	    	<figure class="figurenews">
+	    		<img src="{{ asset('img/'~news.image~'/image0.jpg') }}" alt="">
+	            <figcaption>{{ news.datetime|date('Y-m-d') }}</figcaption>
+	            <p>{{ news.description }}</p>
+	        </figure> 
+		</div>
+		
+		<div class="nextnews">
+	    	<h2>{{ title }}</h2>
+	    	<figure class="figurenews">
+	    		<img src="{{ asset('img/'~news.image~'/image0.jpg') }}" alt="">
+	            <figcaption>{{ news.datetime|date('Y-m-d') }}</figcaption>
+	            <p>{{ news.description }}</p>
+	        </figure> 
+		</div>
 
 </div>
+
 
 <div id="resp"></div>
     
@@ -29,9 +59,20 @@
 
 <div class="clear"></div>
 
-    <a href="/assets/img/dzieci.jpg" data-lightbox="roadtrip">Image #2</a>
-    <a href="/assets/img/dzieci2.jpg" data-lightbox="roadtrip">Image #3</a>
-    <a href="/assets/img/dzieci.jpg" data-lightbox="roadtrip">Image #4</a>
+<div id="gallery">   
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci.jpg" alt=""></a>
+    <a href="/assets/img/dzieci2.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci2.jpg" alt=""></a>
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci3.jpg" alt=""></a>
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage" src="/assets/img/dzieci3.jpg" alt=""></a>
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci.jpg" alt=""></a>
+    <a href="/assets/img/dzieci2.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci2.jpg" alt=""></a>
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci3.jpg" alt=""></a>
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage" src="/assets/img/dzieci3.jpg" alt=""></a>
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci.jpg" alt=""></a>
+    <a href="/assets/img/dzieci2.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci2.jpg" alt=""></a>
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage"  src="/assets/img/dzieci3.jpg" alt=""></a>
+    <a href="/assets/img/dzieci.jpg"  data-lightbox="roadtrip"><img class="smallimage" src="/assets/img/dzieci3.jpg" alt=""></a>
+</div> 
 
 <!-- 	<div id='aktualnosci'>
 		<h3>{{ title }}</h3>
