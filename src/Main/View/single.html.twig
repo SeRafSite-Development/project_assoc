@@ -6,7 +6,7 @@
 	    <div class="nextnews">
 	    	<h2>{{ title }}</h2>
 	    	<figure class="figurenews">
-	    		<img src="{{ asset('img/'~news.image~'/'~row) }}" alt="">
+	    		<img src="{{ asset('img/'~news.image~'/image0.jpg') }}" alt="">
 	            <figcaption>{{ news.datetime|date('Y-m-d') }}</figcaption>
 	            <p>{{ news.description }}</p>
 	        </figure> 
@@ -26,6 +26,12 @@
     </ul>
     
 </aside>
+
+<div class="clear"></div>
+
+    <a href="/assets/img/dzieci.jpg" data-lightbox="roadtrip">Image #2</a>
+    <a href="/assets/img/dzieci2.jpg" data-lightbox="roadtrip">Image #3</a>
+    <a href="/assets/img/dzieci.jpg" data-lightbox="roadtrip">Image #4</a>
 
 <!-- 	<div id='aktualnosci'>
 		<h3>{{ title }}</h3>
