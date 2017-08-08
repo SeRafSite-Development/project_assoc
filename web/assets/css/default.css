@@ -574,6 +574,12 @@ figcaption
     margin-right: auto;
 }
 
+#help img
+{
+    width: 140px;
+    height: 100px;
+    margin-right: 2%;
+}
 
 #partnerzy 
 {
